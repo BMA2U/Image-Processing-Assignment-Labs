@@ -1,6 +1,6 @@
 # 🖼️ Image Processing — Assignment Labs
 
-**Bassem Al-Taheri**
+**Eng.Bassem Al-Taheri**
 
 A collection of Python lab assignments for an **Image Processing** course.  
 Each lab explores a different set of techniques using **OpenCV**, **Pillow (PIL)**, **NumPy**, and **Matplotlib**.
