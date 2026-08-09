@@ -33,6 +33,18 @@ Assignment/
 │       ├── product_no_bg.png           # Product with transparent background
 │       └── product_result.jpg          # Final composited output
 │
+├── lab3/
+│   ├── main.py                         # Point transformations runner/demo
+│   ├── point_transformations.py        # Core transformation functions
+│   └── images/                         # Lab 3 assets & outputs
+│       ├── img1.png                    # Input for transformations demo
+│       ├── background.png              # Background image
+│       ├── product.png                 # Product image
+│       ├── product_no_bg.png           # Product with no background
+│       ├── product_result.jpg          # Composited result
+│       ├── varese.jpg                  # Varese city image
+│       └── img*.png, planet_glow.jpg   # Other lab image assets
+│
 └── README.md
 ```
 
@@ -119,6 +131,39 @@ python lab2/assignment3.py
 
 ---
 
+## 🧪 Lab 3 — Point Transformations
+
+### Assignment 1 · Image Path Existence Checking
+
+A utility function to verify if an image file exists at a given path before loading, avoiding runtime crashes.
+
+### Assignment 2 · Negative Transformation
+
+Inverts the pixel values of the input image. For an 8-bit image, the formula is:
+$$s = 255 - r$$
+where $r$ is the input intensity and $s$ is the output intensity.
+
+### Assignment 3 · Logarithmic Transformation
+
+Expands values of dark pixels in an image while compressing higher-level values. The formula is:
+$$s = c \log(1 + r)$$
+where $c$ is a scaling constant chosen so that the maximum output value is 255 ($c = 255 / \log(1 + \max(r))$).
+
+### Assignment 4 · Histogram Equalization
+
+Enhances the contrast of an image by stretching its intensity range. Color images are automatically converted to grayscale before applying the equalization.
+Displays a $2 \times 2$ grid showing:
+1. Original Grayscale Image
+2. Histogram of the Original Image
+3. Equalized Grayscale Image
+4. Histogram of the Equalized Image
+
+```bash
+python lab3/main.py
+```
+
+---
+
 ## ⚙️ Requirements
 
 - **Python 3.8+**
@@ -148,6 +193,7 @@ pip install -r requirements.txt   # or use the pip command above
 # Run any assignment
 python lab1/assignment_2_drawing_pillow.py
 python lab2/assignment1.py
+python lab3/main.py
 ```
 
 > **Note:** Make sure to run scripts from the repository root so relative image paths resolve correctly.
